@@ -1,42 +1,7 @@
 <html>
     <head>
         <title>Assignment</title>
-        <style>
-            #container {
-                top: 0px;
-                bottom: 0px;
-                left: 0px;
-                right: 0px;
-            }
-            #left, #right {
-                position: absolute
-            }
-            #left {
-                top: 0px;
-                width: 200px;
-                bottom: 0px;
-                background: #e953f7;
-                border-style:solid;
-            }
-            #right {
-                top: 0px;
-                left: 200px;
-                right: 0;
-                bottom: 0px;
-                background: #61fc5c;
-                border-style:solid;
-            }
-            #tracker{
-                text-align: center;
-                margin-top: 300px;
-            }
-            td{
-                padding: 10px;
-                background: #f1b9f6;
-                width: 200px;
-                text-align: center;
-            }
-        </style>
+        <link rel="stylesheet" href="./main.css">
     </head>
     <body>
         <div id="container">
@@ -62,20 +27,6 @@
                 </h1>
             </div>
         </div>
-        <script>
-            var allow = 1;
-            document.getElementById("inc").addEventListener('click',function (event){
-                if(allow ==0)
-                    return ;
-                allow= 0;
-                var text_now = document.getElementById("tracker").innerText.split(' ');
-                text_now[4] = String(Number(text_now[4])+1);
-                document.getElementById("tracker").innerHTML = text_now.join(' ');
-                console.log(event.target);
-                setTimeout(function (){
-                    allow=1;
-                },2000);
-            }, false);
-        </script>
+        <script src="./main.js" ></script>
     </body>
 </html>
